@@ -4,9 +4,17 @@ export default function Example5() {
   const [count, setCount] = React.useState(0);
   React.useEffect (() => {
     console.log("componentDidMount", count)
+    
+    return () =>  {
+      console.log("componentWillUnmount")
+    }
   }, []);
   React.useEffect (() => {
     console.log("componentDidUpdate", count)
+
+    return () =>  {
+      console.log("componentWillUnmount")
+    }
   }, [count]);
   return (
     <div>

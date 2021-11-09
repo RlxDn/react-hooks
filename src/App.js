@@ -1,12 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
-import Example1 from './conponents/Example1';
-import Example2 from './conponents/Example2';
-import Example3 from './conponents/Example3';
-import Example4 from './conponents/Example4';
-import Example5 from './conponents/Example5';
+// import Example1 from './components/Example1';
+// import Example2 from './components/Example2';
+// import Example3 from './components/Example3';
+// import Example4 from './components/Example4';
+import Example5 from './components/Example5';
+import useWindowWidth from './Hooks/useWindowWidth';
+import Example7 from './components/Example7';
 
 function App() {
+  const width = useWindowWidth();
   return (
     <div className="App">
       <header className="App-header">
@@ -16,6 +19,8 @@ function App() {
         <Example3></Example3>
         <Example4></Example4> */}
         <Example5></Example5>
+        <Example7></Example7>
+        {width}
       </header>
     </div>
   );
